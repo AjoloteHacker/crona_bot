@@ -1,0 +1,54 @@
+  ### 🩸 ¿Qué incluye Crona? (56 comandos híbridos c! y /)
+  1. Sistema Híbrido (c! + Slash Commands /) — index.ts
+      • Funciona tanto con prefijo clásico (c!hug @usuario, c!profile) como con Slash Commands (/hug, /profile).
+      • El prefijo es personalizable por servidor mediante c!prefix <nuevo> o /prefix.
+      • Si mencionas a @Crona, te responde con su prefijo actual y cómo abrir el menú de ayuda.
+  2. Roleplay e Interacción Anime con Contador (11 comandos) — roleplay.ts y animeGif.ts
+      • hug, pat, kiss, slap, cuddle, poke, bite, kill, cry, blush, dance (con sus alias en español como c!abrazar,
+      c!acariciar, c!besar, c!cachetada, etc.).
+      • Obtiene GIFs de anime en tiempo real (nekos.best + waifu.pics + respaldos locales) y guarda en la base de
+      datos cuántas veces dos usuarios se han abrazado/acariciado/etc. al estilo clásico de Chocolat.
+      • Respuestas especiales cuando te mencionas a ti mismo/a o cuando interactúas directamente con Crona.
+  3. Economía de Almas y Tienda de Shibusen (10 comandos) — economy.ts
+      • Moneda: Almas (🟣) y Banco de Sangre Negra (🩸).
+      • Comandos: balance (bal), daily, work, hunt (cazar Kishins con riesgo/recompensa), deposit (dep), withdraw
+      (with), pay, shop, buy, inventory (inv), leaderboard (top).
+      • Comprar objetos especiales en la tienda desbloquea títulos exclusivos para el perfil.
+  4. Perfiles Clásicos, Niveles/XP y Reputación (5 comandos) — profile.ts
+      • Sistema pasivo de experiencia (XP) y subida de nivel automática al conversar en el servidor (con recompensa
+      de Almas).
+      • Comandos: profile (perfil), rank (nivel), rep (+rep cada 12h), setbio y settitle.
+  5. Social y Matrimonio (3 comandos) — social.ts
+      • marry: Propuesta de matrimonio con botones interactivos para aceptar o rechazar (detecta si tienes el Anillo
+      de Resonancia de Alma de la tienda).
+      • divorce: Disuelve el vínculo actual.
+      • ship: Calculadora de afinidad romántica entre dos usuarios con barra de progreso y combinación de nombres.
+  6. Minijuegos y Diversión (6 comandos) — fun.ts
+      • 8ball (Oráculo con respuestas de Crona y Ragnarok), roll (dados), coinflip (moneda), rps (ppt), trivia (Quiz
+      interactivo de Soul Eater / Anime con botones y premio de Almas), y scream (frase).
+  7. Moderación y Configuración (7 comandos) — moderation.ts
+      • kick, ban, timeout (mute), clear (purge), warn, warnings y prefix.
+  8. Música en Canales de Voz (7 comandos) — music.ts y MusicManager.ts
+      • play, skip, stop, pause, resume, queue y nowplaying.
+  9. Utilidades y Menú Interactivo (6 comandos) — utility.ts
+      • help (con menú desplegable por categorías), avatar, userinfo, serverinfo, botinfo y ping.
+  10. Base de Datos SQLite Nativa — db.ts
+      • Usa node:sqlite integrado nativamente en tu versión de Node.js, guardando todo automáticamente en data/crona.
+      db sin necesidad de servidores externos.
+
+  ──────
+  ### 🚀 Pasos para encender a Crona
+
+  1. Crea un archivo .env a partir de .env.example con el Token y el Client ID de tu aplicación de Discord (recuerda
+  activar Message Content Intent y Server Members Intent en el Discord Developer Portal):
+    Copy-Item .env.example .env
+
+  2. Registra los Slash Commands (/) en Discord:
+    npm run deploy
+
+  3. Inicia a Crona en modo desarrollo:
+    npm run dev
+
+
+  ¿Quieres que agreguemos algún comando personalizado adicional (por ejemplo, imágenes de bienvenida, sistema de
+  waifus/gacha o algún comando secreto de Soul Eater)?

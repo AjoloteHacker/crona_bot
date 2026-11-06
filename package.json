@@ -1,0 +1,40 @@
+{
+  "name": "crona-bot",
+  "version": "1.0.0",
+  "description": "Crona - Bot multifunción de Discord inspirado en la época dorada (Chocolat) con temática de Soul Eater",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "deploy": "tsx src/deploy-commands.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "crona",
+    "soul-eater",
+    "chocolat",
+    "anime",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/voice": "^0.19.2",
+    "@snazzah/davey": "^0.1.12",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "ffmpeg-static": "^5.2.0",
+    "libsodium-wrappers": "^0.7.15",
+    "opusscript": "^0.0.8",
+    "play-dl": "^1.9.7",
+    "youtube-dl-exec": "^3.1.19"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
